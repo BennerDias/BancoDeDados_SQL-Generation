@@ -72,3 +72,33 @@ SELECT * FROM tb_produtos;
 
 -- EX03
 
+CREATE DATABASE db_escola;
+
+USE db_escola;
+
+CREATE TABLE tb_estudantes (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    idade INT NOT NULL,
+    serie VARCHAR(50) NOT NULL,
+    nota DECIMAL(3,1) NOT NULL,
+    turma VARCHAR(50) NOT NULL
+);
+
+INSERT INTO tb_estudantes (nome, idade, serie, nota, turma) VALUES
+("Ana Souza", 14, "8º Ano", 8.5, "Turma A"),
+("Carlos Silva", 15, "9º Ano", 6.2, "Turma B"),
+("Mariana Costa", 13, "7º Ano", 9.1, "Turma A"),
+("Pedro Santos", 14, "8º Ano", 5.8, "Turma C"),
+("Juliana Lima", 12, "6º Ano", 7.3, "Turma B"),
+("Lucas Fernandes", 16, "1º Ano EM", 4.9, "Turma D"),
+("Beatriz Almeida", 15, "9º Ano", 8.0, "Turma C"),
+("Rafael Oliveira", 13, "7º Ano", 6.7, "Turma A");
+
+SELECT * FROM tb_estudantes WHERE nota > 7.0;
+
+SELECT * FROM tb_estudantes WHERE nota < 7.0;
+
+UPDATE tb_estudantes SET nota = 7.5 WHERE id = 6;
+
+SELECT * FROM tb_estudantes;
