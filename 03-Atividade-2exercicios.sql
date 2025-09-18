@@ -46,7 +46,7 @@ SELECT * FROM tb_personagens WHERE char_defense >= 1000 AND char_defense <= 2000
 
 SELECT * FROM tb_personagens WHERE char_name LIKE '%C%';
 
-SELECT char_name, char_level, char_power, char_defense, tb_classes.id
+SELECT char_name, char_level, char_power, char_defense, tb_classes.name_class, tb_classes.type_attack
 FROM tb_personagens INNER JOIN tb_classes
 ON tb_personagens.class_id = tb_classes.id;
 
